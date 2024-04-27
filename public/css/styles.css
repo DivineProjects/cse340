@@ -38,7 +38,7 @@ body {
   position: relative;
   padding-bottom: 6rem;
   box-sizing: inherit;
-  min-width: 235px;
+  min-width: 250px;
 }
 
 /* Header */
@@ -129,7 +129,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.herocar img {
+.hero img {
   display: block;
   width: 100%;
   height: auto;
