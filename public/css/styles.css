@@ -4,3 +4,15 @@
 *:after {
   box-sizing: border-box;
 }
+
+/* Changes */
+
+/* NAV */
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  color: red;
+}
