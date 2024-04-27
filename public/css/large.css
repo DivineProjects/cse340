@@ -1,0 +1,40 @@
+@media (min-width: 651px) {
+
+    .reviewUpgrade-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .upgradeSection {
+        order: 1;
+    }
+
+    .reviewSection {
+        order: 2;
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    .herowntoday {
+        position: absolute;
+        top: 30%;
+        left: 1%;
+        margin-bottom: 2px;
+        background-color: rgba(255, 255, 255, 0.6) ;
+        color: blue;
+        font-size: 120%;
+      }
+
+      .reviewSection ul {
+        height: 100%;
+        margin: 0.5rem;
+      }
+
+      .reviewSection li {
+        margin-bottom: 0.75rem;
+      }
+
+     
+}
