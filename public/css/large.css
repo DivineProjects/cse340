@@ -1,4 +1,11 @@
-@media (min-width: 651px) {
+@media (min-width: 500px) {
+
+    body{
+        background-image: url("/images/site/checkerboard.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*background-position: 0% 50%;*/
+    }
 
     .reviewUpgrade-container {
         display: grid;
