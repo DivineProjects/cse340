@@ -23,13 +23,14 @@ app.set("layout", "./layouts/layout") // not at views root
  * Routes
  *************************/
 app.use(static)
-// Inventory routes
-app.use("./inv", inventoryRoute)
+
 // app.get("/", function(req, res){
 //   res.render("index", {title: "Home"})
 // })
 // index route
 app.get("/", baseController.buildHome)
+// Inventory routes
+app.use("/inv", inventoryRoute)
 
 /* ***********************
  * Local Server Information
