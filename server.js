@@ -56,22 +56,6 @@ app.use(async (err, req, res, next) => {
   })
 })
 
-// })
-
-/* ***********************
-* Express Error Handler
-* Place after all other middleware
-*************************/
-// app.use(async (err, req, res, next) => {
-//   console.log("\n iside the error handler\n")
-//   let nav = await utilities.getNav()
-//   console.error(`Error at: "${req.originalUrl}": ${err.message}`)
-//   res.render("errors/error", {
-//     title: err.status || 'Server Error',
-//     message: err.message,
-//     nav
-//   })
-// })
 
 
 /* ***********************
