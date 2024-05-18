@@ -8,6 +8,6 @@ const invController = require("../controllers/invController")
 router.get("/type/:classificationId", invController.buildByClassificationId);
 
 // Route to build inventory by single view
-router.get("/details/:singleViewId", invController.buildBySingleViewId);
+router.get("/detail/:singleViewId", invController.buildBySingleViewId);
 
 module.exports = router;

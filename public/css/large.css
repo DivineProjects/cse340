@@ -1,4 +1,4 @@
-@media (min-width: 500px) {
+@media (min-width: 600px) {
 
     body{
         background-image: url("/images/site/small_check.jpg");
@@ -48,5 +48,24 @@
         margin-bottom: 0.75rem;
       }
 
+      /* large view */
+      /* Styles Vehicle Detail view */
+        .vehicleDetails {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            align-items: center;
+        }
+  
+        .vehicleDetails img {
+            grid-column: 1 / 2;
+        }
+  
+        .vehicleDetails section {
+            grid-column: 2 / 3;
+        }
+
+        /* CSS classified view Pages */
+  
      
 }
