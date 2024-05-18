@@ -90,8 +90,8 @@ nav a {
   display: block;
   text-decoration: none;
   text-align: center;
-  /* padding: auto; */
-  padding: 2px;
+  height: 40px;
+  padding: 0.5rem;
   color: whitesmoke;
 }
 
