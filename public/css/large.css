@@ -30,42 +30,46 @@
 
     .herowntoday {
         position: absolute;
-        top: 30%;
-        left: 1%;
-        margin-bottom: 2px;
-        background-color: rgb(249, 250, 252) ;
-        color: blue;
-        font-size: 120%;
-        padding: 2px;
-      }
+    top: 30%;
+    left: 1%;
+    margin-bottom: 2px;
+    background-color: rgb(249, 250, 252) ;
+    color: blue;
+    font-size: 120%;
+    padding: 2px;
+    }
 
-      .reviewSection ul {
-        height: 100%;
-        margin: 0.5rem;
-      }
+    .reviewSection ul {
+    height: 100%;
+    margin: 0.5rem;
+    }
 
-      .reviewSection li {
-        margin-bottom: 0.75rem;
-      }
+    .reviewSection li {
+    margin-bottom: 0.75rem;
+    }
 
-      /* large view */
-      /* Styles Vehicle Detail view */
-        .vehicleDetails {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 20px;
-            align-items: center;
-        }
-  
-        .vehicleDetails img {
-            grid-column: 1 / 2;
-        }
-  
-        .vehicleDetails section {
-            grid-column: 2 / 3;
-        }
+    /* large view */
+    /* Styles Vehicle Detail view */
+    .vehicleDetails {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        align-items: center;
+    }
 
-        /* CSS classified view Pages */
-  
+    .vehicleDetails img {
+        grid-column: 1 / 2;
+    }
+
+    .vehicleDetails section {
+        grid-column: 2 / 3;
+    }
+
+    /* CSS Form View */
+    .formContainer {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+
      
 }
