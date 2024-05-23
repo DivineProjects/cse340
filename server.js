@@ -16,6 +16,7 @@ const baseController = require("./controllers/baseController")
 const inventoryRoute = require("./routes/inventoryRoute")
 const utilities = require("./utilities/")
 const errorController = require("./controllers/errorController")
+const accountRoute = require("./routes/accountRoute")
 
 
 /* ***********************
@@ -50,6 +51,9 @@ app.set("layout", "./layouts/layout") // not at views root
 /* ***********************
  * Routes
  *************************/
+// account route as first element
+app.use("/account", utilities.handleErrors(accountRoute))
+
 app.use(static)
 
 // app.get("/", function(req, res){
