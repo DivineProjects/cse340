@@ -9,7 +9,7 @@
 
 
 <div class="form-container">
-    <form action="/register" method="get">
+    <form action="/account/register" method="get">
         <fieldset>
             <legend class="top">Joining Information</legend>
             <label class="top">First Name*<input type="text" name="fname" required id="fname"></label>
@@ -38,14 +38,6 @@
             <input type="hidden" id="currentDateTime" name="currentDateTime">
         </fieldset>
 
-        <fieldset>
-            <legend>Membership</legend>
-            <div>Membership Level</div>
-            <label class="sbs"><input type="radio" name="membership" value="np">Non Profit Membership</label>
-            <label class="sbs"><input type="radio" name="membership" value="bronze">Bronze Membership</label>
-            <label class="sbs"><input type="radio" name="membership" value="silver">Silver Membership</label>
-            <label class="sbs"><input type="radio" name="membership" value="gold">Gold Membership</label>
-        </fieldset>
         <label class="sbs"><input type="hidden" id="timestamp" name="timestamp" value=""></label>
         <input type="submit" value="Join" class="submitBtn">
     </form>
