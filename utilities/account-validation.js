@@ -1,5 +1,5 @@
 const utilities = require(".")
-const {body, validationResults} = require("express-validator")
+const {body, validationResult} = require("express-validator")
 const validate = {}
 
 /*  **********************************
