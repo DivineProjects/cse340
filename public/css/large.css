@@ -70,6 +70,17 @@
         padding: 0 10px; /* Reduce padding for smaller screens */
     }
 
+    
+    /* FORM */
+
+    form label.sbs {
+        padding: 0.4rem 0;
+    }
+
+    main.form-container {
+        width: 100%;
+
+    }
 
      
 }

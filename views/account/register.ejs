@@ -9,9 +9,8 @@
 
 
 <div class="form-container">
-    <form action="/account/register" method="get">
-        <fieldset>
-            <legend class="top">Joining Information</legend>
+    <form action="/account/register" method="post">
+        
             <label class="top">First Name*<input type="text" name="fname" required id="fname"></label>
             <label class="top">Last Name*<input type="text" name="lname" required id="lname"></label>
             <label class="top">Title / Position <input type="text" id="position" name="position"
@@ -21,25 +20,11 @@
             <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required
                     id="email">
             </label>
-            <label class="top">Phone*<input type="tel" name="phone" placeholder="0700000000" required
-                    id="phone">
-            </label>
-            <label class="top">Organization's Name*<input type="text" name="organ" required id="organ"
-                    pattern="[a-zA-Z -]{7,}"
-                    title="Please enter at least 7 characters containing only letters, hyphens, and spaces">
-            </label>
-
+            <label class="top">Password* <input type="password" name="pwd" id="pwd" pattern="[A-Za-z0-9]{12,}"
+                title="Please enter at least 12 alphanumeric characters"></label>
             <label class="pwderror"></label>
-
-            <label class="top">
-                <span>Organisation</span>
-                <textarea id="org-disc" name="org-disc" rows="10" cols="50"></textarea>
-            </label>
-            <input type="hidden" id="currentDateTime" name="currentDateTime">
-        </fieldset>
-
-        <label class="sbs"><input type="hidden" id="timestamp" name="timestamp" value=""></label>
-        <input type="submit" value="Join" class="submitBtn">
+            
+            <input type="submit" value="Join" class="submitBtn">
     </form>
 </div>
 
