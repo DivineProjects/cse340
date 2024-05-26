@@ -5,6 +5,13 @@
     } %>
 
 <% messages() %>
+<% if (errors) { %>
+    <ul class="notice">
+   <% errors.array().forEach(error => { %>
+     <li><%= error.msg %></li>
+  <%  }) %>
+   </ul>
+  <% } %>
 
 <div class="formContainer">
 
@@ -19,7 +26,8 @@
         <input type="password" name="account_password" id="account_password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
         <span>Passwords must be at least 12 characters and contain at least 1 number, 1 capital letter and 1 special character</span> 
     </div>
-    <button type="submit">Login</button>
+    <!-- <button type="submit">Login</button> -->
+    <input type="submit" value="Login" class="submitBtn">
 </form>
 
 <p>No account? <a href="/account/register">Sign Up</a></p>
