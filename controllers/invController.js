@@ -38,6 +38,18 @@ async function buildBySingleViewId (req, res, next) {
   })
 }
 
+/* ****************************************
+*  Bulid Management view
+* *************************************** */
+async function buildManagement(req, res, next) {
+  let nav = await utilities.getNav()
+  res.render("./inventory/management", {
+    title: "Management",
+    nav,
+    errors: null,
+  })
+}
+
 // module.exports = invCont
-module.exports = {buildByClassificationId, buildBySingleViewId}
+module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement}
 
