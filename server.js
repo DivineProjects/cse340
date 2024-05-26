@@ -72,6 +72,8 @@ app.use(static)
 app.get("/", utilities.handleErrors(baseController.buildHome))
 // Inventory routes
 app.use("/inv", utilities.handleErrors(inventoryRoute))
+// Inventory routes
+app.use("/inventory", utilities.handleErrors(inventoryRoute))
 // Define a route that triggers a 505 error
 app.get("/error", utilities.handleErrors(errorController.builError))
 

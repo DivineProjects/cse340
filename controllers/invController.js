@@ -50,6 +50,36 @@ async function buildManagement(req, res, next) {
   })
 }
 
+/* ****************************************
+*  Add Classification view
+* *************************************** */
+async function addClassification(req, res) {
+  let nav = await utilities.getNav()
+  const { classification_name } = req.body
+
+  const addClass = await invModel.addClassification(
+    classification_name
+  )
+
+  if (addClass) {
+    req.flash(
+      "notice",
+      `Congratulations, New Classification ${ classification_name } addClassification`
+    )
+    res.status(201).render("./inventory/management", {
+      title: "Management",
+      nav,
+    errors: null,
+    })
+  } else {
+    req.flash("notice", "Sorry, the classification entry failed.")
+    res.status(501).render("./inventory/add-classification", {
+      title: "Add Classification",
+      nav,
+    })
+  }
+}
+
 // module.exports = invCont
-module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement}
+module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement, addClassification}
 
