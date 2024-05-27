@@ -14,16 +14,7 @@
    </ul>
   <% } %>
 
-  inv_make,
-        inv_model,
-        inv_year,
-        inv_description,
-        inv_image,
-        inv_thumbnail,
-        inv_price,
-        inv_miles,
-        inv_color,
-        classification_id
+  
 <div class="form-container">
     <form action="/inventory/add" method="post">
         <label class="top">Make*<input type="text" name="inv_make" required id="inv_make" value="<%= locals.inv_make %>"></label>
