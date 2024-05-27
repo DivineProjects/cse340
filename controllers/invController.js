@@ -103,6 +103,44 @@ async function buildAddInventory(req, res, next) {
   })
 }
 
+/* ****************************************
+*  Add Inventrory Controller
+* *************************************** */
+async function addInventory(req, res) {
+  let nav = await utilities.getNav()
+  const { inv_make, inv_model, inv_year, inv_description, inv_image, inv_thumbnail, inv_price, inv_miles, inv_color, classification_id } = req.body
+
+  const addInv = await invModel.addInventoryData(
+    inv_make,
+    inv_model,
+    inv_year,
+    inv_description,
+    inv_image,
+    inv_thumbnail,
+    inv_price,
+    inv_miles,
+    inv_color,
+    classification_id
+  )
+
+  if (addInv) {
+    req.flash(
+      "notice",
+      `Congratulations, data added sucessfully.`
+    )
+    res.status(201).render("inventory/management", {
+      title: "Inventory Management",
+      nav,
+    })
+  } else {
+    req.flash("notice", "Sorry, dataentry failed.")
+    res.status(501).render("inventory/add", {
+      title: "Add Inventory",
+      nav,
+    })
+  }
+}
+
 // module.exports = invCont
-module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement, addClassification, buildClassification, buildAddInventory}
+module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement, addClassification, buildClassification, buildAddInventory, addInventory}
 
