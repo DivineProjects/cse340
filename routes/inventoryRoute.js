@@ -15,7 +15,7 @@ router.get("/detail/:singleViewId", invController.buildBySingleViewId);
 router.get("/management", utilities.handleErrors(invController.buildManagement));
 
 // router to build add-classification
-router.get("/add-classification", utilities.handleErrors(invController.addClassification));
+router.get("/add-classification", utilities.handleErrors(invController.buildClassification));
 router.post("/add-classification", utilities.handleErrors(invController.addClassification));
 
 module.exports = router;

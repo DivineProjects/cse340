@@ -50,13 +50,26 @@ async function buildManagement(req, res, next) {
   })
 }
 
+
+/* ****************************************
+*  Bulid Management view
+* *************************************** */
+async function buildClassification(req, res, next) {
+  let nav = await utilities.getNav()
+  res.render("./inventory/add-classification", {
+    title: "Add-Classification",
+    nav,
+    errors: null,
+  })
+}
+
 /* ****************************************
 *  Add Classification view
 * *************************************** */
 async function addClassification(req, res) {
   let nav = await utilities.getNav()
-  const { classification_name } = req.body
-
+  const classificationHTML  = req.body
+  const classification_name = classificationHTML.classificationName
   const addClass = await invModel.addClassification(
     classification_name
   )
@@ -81,5 +94,5 @@ async function addClassification(req, res) {
 }
 
 // module.exports = invCont
-module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement, addClassification}
+module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement, addClassification, buildClassification}
 
