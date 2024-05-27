@@ -46,7 +46,6 @@ async function buildManagement(req, res, next) {
   res.render("./inventory/management", {
     title: "Management",
     nav,
-    errors: null,
   })
 }
 
@@ -57,7 +56,7 @@ async function buildManagement(req, res, next) {
 async function buildClassification(req, res, next) {
   let nav = await utilities.getNav()
   res.render("./inventory/add-classification", {
-    title: "Add-Classification",
+    title: "Add Classification",
     nav,
     errors: null,
   })
