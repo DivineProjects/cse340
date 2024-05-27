@@ -98,9 +98,11 @@ async function addClassification(req, res) {
 * *************************************** */
 async function buildAddInventory(req, res, next) {
   let nav = await utilities.getNav()
+  let buildClassificationList = await utilities.buildClassificationList()
   res.render("inventory/add", {
     title: "Add Inventory",
     nav,
+    buildClassificationList,
     errors: null,
   })
 }
@@ -110,6 +112,7 @@ async function buildAddInventory(req, res, next) {
 * *************************************** */
 async function addInventory(req, res) {
   let nav = await utilities.getNav()
+  let buildClassificationList = await utilities.buildClassificationList()
   const { inv_make, inv_model, inv_year, inv_description, inv_image, inv_thumbnail, inv_price, inv_miles, inv_color, classification_id } = req.body
 
   const addInv = await invModel.addInventoryData(
@@ -139,6 +142,7 @@ async function addInventory(req, res) {
     req.flash("notice", "Sorry, dataentry failed.")
     res.status(501).render("inventory/add", {
       title: "Add Inventory",
+      buildClassificationList,
       nav,
     })
   }

@@ -88,4 +88,6 @@ async function addInventoryData(inv_make, inv_model, inv_year, inv_description, 
 }
 
 
+
+
 module.exports = {getClassifications, getInventoryByClassificationId, getInventoryBySingleViewId, addClassification, checkExistingClassification, addInventoryData};
