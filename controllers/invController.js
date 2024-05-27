@@ -46,6 +46,7 @@ async function buildManagement(req, res, next) {
   res.render("./inventory/management", {
     title: "Management",
     nav,
+    errors: null,
   })
 }
 
@@ -100,6 +101,7 @@ async function buildAddInventory(req, res, next) {
   res.render("inventory/add", {
     title: "Add Inventory",
     nav,
+    errors: null,
   })
 }
 
@@ -131,6 +133,7 @@ async function addInventory(req, res) {
     res.status(201).render("inventory/management", {
       title: "Inventory Management",
       nav,
+      errors: null,
     })
   } else {
     req.flash("notice", "Sorry, dataentry failed.")
