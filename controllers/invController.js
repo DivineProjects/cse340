@@ -92,6 +92,17 @@ async function addClassification(req, res) {
   }
 }
 
+/* ****************************************
+*  Deliver Add Inventory View
+* *************************************** */
+async function buildAddInventory(req, res, next) {
+  let nav = await utilities.getNav()
+  res.render("inventory/add", {
+    title: "Add Inventory",
+    nav,
+  })
+}
+
 // module.exports = invCont
-module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement, addClassification, buildClassification}
+module.exports = {buildByClassificationId, buildBySingleViewId, buildManagement, addClassification, buildClassification, buildAddInventory}
 
