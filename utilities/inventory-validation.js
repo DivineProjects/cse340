@@ -13,14 +13,16 @@ validate.classificationRules = () => {
         .trim()
         .escape()
         .notEmpty()
-        .isLength({ min: 3 })
+        .isLength({ min: 1 })
         .withMessage("Please provide a Classification name.") // on error this message is sent.
         .custom(async (classification_name)=>{
           const classificationExist = await inventoryModel.checkExistingClassification(classification_name)
+          // console.log("inside classrules")
+          // /console.log(body("classification_name"))
           if (classificationExist){
             throw new Error("Inventory Classification exists. Please use different classification")
           }
-        }),
+          }),
 
     ]
   }
@@ -30,8 +32,10 @@ validate.classificationRules = () => {
  * Check data and return errors or continue to registration
  * ***************************** */
 validate.checkClassificationData = async (req, res, next) => {
-  const className = req.body
-  const classification_name = className.classificationName
+  const { classification_name } = req.body
+  // console.log(classification_name)
+  // const className = req.body
+  // const classification_name = className.classificationName
   let errors = []
   errors = validationResult(req)
   if (!errors.isEmpty()) {

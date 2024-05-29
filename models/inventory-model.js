@@ -67,6 +67,8 @@ async function addClassification(classification_name){
  * ********************* */
 async function checkExistingClassification(classification_name){
   try {
+    // console.log("inside models,")
+    // console.log(classification_name)
     const sql = "SELECT * FROM classification WHERE classification_name = $1"
     const class_name = await pool.query(sql, [classification_name])
     return class_name.rowCount

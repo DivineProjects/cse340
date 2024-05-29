@@ -63,17 +63,21 @@ async function buildClassification(req, res, next) {
   })
 }
 
+
 /* ****************************************
 *  Add Classification view
 * *************************************** */
 async function addClassification(req, res) {
   let nav = await utilities.getNav()
-  const classificationHTML  = req.body
-  const classification_name = classificationHTML.classificationName
+  // const classificationHTML  = req.body
+  // const classification_name = classificationHTML.classificationName
+  const { classification_name } = req.body
+  // console.log("inside add classification")
+  // console.log(classification_name)
   const addClass = await invModel.addClassification(
     classification_name
   )
-
+//  console.log(addClass)
   if (addClass) {
     req.flash(
       "notice",
