@@ -24,9 +24,9 @@ router.post(
     utilities.handleErrors(invController.addClassification));
 
 // router to build add inventory
-router.get("/add", utilities.handleErrors(invController.buildAddInventory));
+router.get("/add-inventory", utilities.handleErrors(invController.buildAddInventory));
 router.post(
-    "/add",
+    "/add-inventory",
     invValidate.inventryDataRules(),
     invValidate.checkInventoryData, 
     utilities.handleErrors(invController.addInventory));

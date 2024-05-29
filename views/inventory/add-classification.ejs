@@ -15,7 +15,7 @@
   <% } %>
 
 
-<div class="form-container">
+<!-- <div class="form-container">
     <form action="/inventory/add-classification" method="post">
         <span>new classification name cannot contain a space or special character of any kind.</span>
 
@@ -24,4 +24,16 @@
         
         <input type="submit" value="Register" class="submitBtn">
     </form>
+</div> -->
+
+<div class="formContainer">
+  <form action="/inventory/add-classification" method="post">
+      <div>
+          <label class="top">Add Classification Name* <input class="top"type="text" id="classification_name" name="classificationName" required pattern="^[a-zA-Z0-9]+$" value="<%= locals.classification_name %>"></label>
+          
+          <span>*** New classification name cannot contain a space or special character of any kind.</span>
+      
+      </div>
+      <input type="submit" value="Register" class="submitBtn">
+  </form>
 </div>

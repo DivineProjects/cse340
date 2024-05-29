@@ -15,8 +15,10 @@
   <% } %>
 
 
-<div class="form-container">
-    <form action="/inventory/add" method="post">
+
+<div class="formContainer">
+    <form action="/inventory/add-inventory" method="post">
+        <div>
         <label class="top">Make*<input type="text" name="inv_make" required id="inv_make" value="<%= locals.inv_make %>"></label>
         <label class="top">Model*<input type="text" name="inv_model" required id="inv_model" value="<%= locals.inv_model %>"></label>
         <label class="top">Year*<input type="number" name="inv_year" required id="inv_year" min="1886" value = "<%= locals.inv_year %>"></label>
@@ -28,11 +30,11 @@
         <label class="top">Price*<input type="number" id="inv_price" name="inv_price" required min="0" step="0.01" value = "<%= locals.inv_price %>"></label>
         <label class="top">Miles*<input type="number" id="inv_miles" name="inv_miles" required min="0" step="1" value = "<%= locals.inv_miles %>"></label>
         <label class="top">Color*<input type="text" name="inv_color" required id="inv_color" value = "<%= locals.inv_color %>"></label>
-        <label >Classification*<input type="number" name="classification_id" required id="classification_id" value = "<%= locals.classification_id %>"></label>
-        <label class="top" for="classification_id">Classification*<select id="classification_id" name="classification_id" required>
+        <!-- <label >Classification*<input type="number" name="classification_id" required id="classification_id" value = "<%= locals.classification_id %>"></label> -->
+        <label class="top">Classification*<select id="classification_id" name="classification_id" required>
             <%= buildClassificationList %>
         </select></label>
-        
+        </div>
         <input type="submit" value="Submit" class="submitBtn">
     </form>
 </div>

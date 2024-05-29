@@ -99,7 +99,7 @@ async function addClassification(req, res) {
 async function buildAddInventory(req, res, next) {
   let nav = await utilities.getNav()
   let buildClassificationList = await utilities.buildClassificationList()
-  res.render("inventory/add", {
+  res.render("inventory/add-inventory", {
     title: "Add Inventory",
     nav,
     buildClassificationList,
@@ -140,7 +140,7 @@ async function addInventory(req, res) {
     })
   } else {
     req.flash("notice", "Sorry, dataentry failed.")
-    res.status(501).render("inventory/add", {
+    res.status(501).render("inventory/add-inventory", {
       title: "Add Inventory",
       buildClassificationList,
       nav,
