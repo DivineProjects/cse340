@@ -90,14 +90,14 @@ validate.inventryDataRules = () => {
     body('inv_image')
       .trim()
       .escape()
-      .isURL()
+      .notEmpty()
       .withMessage('Please provide a valid image URL.'),
 
     // inv_thumbnail is required and must be a valid URL
     body('inv_thumbnail')
       .trim()
       .escape()
-      .isURL()
+      .notEmpty()
       .withMessage('Please provide a valid thumbnail URL.'),
 
     // inv_price is required and must be a positive number
