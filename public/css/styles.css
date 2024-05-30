@@ -352,7 +352,15 @@ form input.submitBtn {
   cursor: pointer;
 }
 
-
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
 /* ------------------------------------------------------------- */
 
 
