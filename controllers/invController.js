@@ -81,7 +81,7 @@ async function addClassification(req, res) {
   if (addClass) {
     req.flash(
       "notice",
-      `Congratulations, New Classification ${ classification_name } addClassification`
+      `Congratulations, New Classification: ${ classification_name } added`
     )
     res.status(201).render("./inventory/management", {
       title: "Management",

@@ -371,6 +371,15 @@ form input.submitBtn {
 .inv-management li:hover{
   background-color: green;
 }
+
+/* Error Message */
+.notice {
+  display: block;
+  height: 40px;
+  padding: 1rem;
+  color: rgb(177, 71, 71);
+}
+
 /* CSS for Vehicle Details Page */
 
 .vehicleDetails img {
