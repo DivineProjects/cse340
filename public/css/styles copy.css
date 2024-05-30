@@ -1,8 +1,5 @@
 
-* {
-	box-sizing:border-box;
-}
-
+/******* Change Box Model ***************/
 *,
 *:before,
 *:after {
@@ -15,74 +12,70 @@
   padding: 0;
 
 }
-body {
-    font-family: 'Roboto', 'Cherry Swash', 'serif', sans-serif;
-    color: whitesmoke;
-    font: 100;
-    /* position: relative; */
-    background-color: rgb(2, 51, 81);
-    box-sizing: inherit;
-    display: grid;
-    grid-template-columns: 1fr;
-    /* margin: auto; */
-	 /* display: flex; */
-	/* flex-direction: column; */
-	/* align-items: center; */
-	/* justify-content: center; */
-    /* width: 90%; */
-	/* font-size: 16px; */ 
-	/* font-family: Roboto, Helvetica, sans-serif; */
-} 
 
+body {
+  font-family: 'Roboto', 'Cherry Swash', 'serif', sans-serif;
+  color: whitesmoke;
+  font: 100;
+  position: relative;
+  background-color: rgb(2, 51, 81);
+  box-sizing: inherit;
+  min-width: 250px;
+}
+
+main{
+  background-color: rgb(2, 51, 81);
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
 
 /* Header */
 header {
-    display: flex;
-    /* padding: 20px; */
-    justify-content:space-between;
-    align-items:flex-end;
-    background-color: rgb(0, 46, 73);
-  }
-  
-  header a {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    padding: 1rem;
-    color: whitesmoke;
-  }
+  display: flex;
+  padding: 20px;
+  justify-content:space-between;
+  align-items: center;
+  background-color: rgb(0, 46, 73);
+}
 
-  .siteName {
-    display: flex;
-  }
-  .siteName img{
-    width: 50px;
-    height: auto;
-  }
-  
-  header span {
-    font-size:xx-large;
-    padding: 1rem;
-    font: 400;
-  }
- 
+header a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  color: whitesmoke;
+}
+
+.siteName {
+  display: flex;
+}
+.siteName img{
+  width: 50px;
+  height: auto;
+}
+
+header span {
+  font-size:xx-large;
+  padding: 1rem;
+  font: 400;
+}
+
+
+
 #tools {
-    text-transform:uppercase;
-  }
+  text-transform:uppercase;
+}
 
 /* NAV */
 nav {
-  display: flex;
-  flex-direction: column;
-    background-color: rgb(2, 41, 65);
-    margin: 0;
-  }
+  background-color: rgb(2, 41, 65);
+  margin: 0;
+}
 
 nav ul {
   display: flex;
   /* flex-direction: column; */
   list-style-type: none;
-  
 }
 
 nav ul li {
@@ -106,7 +99,7 @@ nav a:hover {
   /* border: 1px solid white; */
   background-color: rgb(25, 53, 75);
 }
-  
+
 .active {
   border-bottom: 2px solid yellow;
   border-left: 1px solid rgb(52, 67, 80);
@@ -114,65 +107,41 @@ nav a:hover {
   margin-bottom: 2px;
 }
 
-main {
-  display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	/* font-size: 1rem; */
-    
-	border: 1px solid rgba(0,0,0,.1);
-	padding: 1rem;
-	/* background-color: #bed; */
-	box-shadow: 0 0 1rem rgba(0,0,0,.3);
-
-  background-color: rgb(2, 51, 81);
-  /* background-color: red; */
-  margin: auto;
-  }
+/* Main located in index.ejs */
 
 h1 {
+  grid-column: 1/3;
   margin: 1rem 0;
+  font: 100;
 }
-
-div {
-	margin: 1rem;
-	/* border:1px solid rgba(0,0,0,.1); */
-	padding: .5rem;
-	/* background-color:#eee; */
-	/* font-size: smaller; */
-} 
-
 
 /* Hero image */
 .hero {
-position: relative;
-margin-bottom: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
 }
 
 .hero img {
-display: block;
-width: 100%;
-height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .herowntoday {
-position: absolute;
-top: 10%;
-left: 10%;
-margin: 0;
-background-color: rgb(249, 250, 252) ;
-color: blue;
-font-size: 75%;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  margin: 0;
+  background-color: rgb(249, 250, 252) ;
+  color: blue;
+  font-size: 75%;
 }
 
 .herowntoday img {
-width: 50%;
-max-height: 50px;
-margin: 2px;
+  width: auto;
+  max-height: 50px;
+  margin: 2px;
 }
-
 
 /* Review Section*/
 section {
@@ -187,6 +156,8 @@ section {
   list-style-position: inside;
 }
 
+/* Upgrade Section */
+
 .container-upgrade{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -194,13 +165,14 @@ section {
   align-items: center;
 }
 
-/* Upgrade Section */
 .upgrade{
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  background-color: rgb(2, 46, 73);
   border: 1px solid whitesmoke;
 }
 
@@ -219,158 +191,6 @@ section {
 }
 
 
-/* 
-.step-reset {
-  counter-reset: step+4;
-}
-.step {
-  counter-increment: step;
-}
-.step::before {
-  content: '#' counter(step) ':  ';
-  color: green;
-} */
-
-input {padding: .5rem;}
-
-/* aside{
-	margin: 1rem;
-	border: 1px solid rgba(0,0,0,.1);
-	padding: .5rem;
-	background-color: #ffeebb;
-	color: #000;
-} */
-
-
-
-/* CONTACT FORM  VIEW*/
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-  max-width: 400px; /*Set maximum width */ 
-  margin: 0 auto; /* Center horizontally */
-  padding: 0 10px; /* Reduce padding for smaller screens */
-}
-
-/* Styles for form elements */
-
-
-.formContainer input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.submitBtn {
-  background-color: rgba(2, 51, 81, 0.9);
-  color: white;
-  padding: 10px 20px;
-  border: 2px solid white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.submitBtn:hover {
-  background-color: #45a049;
-}
-
-
-/* css for JOIN PAGE  */
-
-/*----------- FORM --------------*/
-
-
-form fieldset {
-  margin: 2rem 0;
-  border: 1px solid red;
-  border-radius: 10px;
-  padding: 0.5rem 2%;
-}
-
-form legend {
-  /* color: red; */
-  margin: auto;
-  padding: 0.5rem 2%;
-  text-align: center;
-}
-
-form label.top,
-form div {
-  display: block;
-  padding-top: 1rem;
-  /* color: var(--text-color); */
-  font-size: 0.8rem;
-}
-
-form label.top input,
-form label.top select,
-form label.top textarea {
-  -webkit-appearance: none;
-  display: block;
-  font-size: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  padding: 0.75rem;
-  /*-this allows the at least 44px to the touch*/
-  color: var(--text-color);
-  width: 100%;
-  /* full width on small screens*/
-  /* max-width: 20rem; */
-  /* for large screens*/
-  background-color: rgba(0, 0, 0, 0.1)
-}
-
-/* show left border red if input is empty / invalid*/
-form label.top input:required {
-  border-left: 6px solid red;
-}
-
-/* changes border to green if input is valid*/
-form label.top input:required:valid {
-  border-left: 6px solid green;
-}
-
-form label.sbs {
-  display: block;
-  padding: 0.75rem 0;
-  color: var(--text-color);
-}
-
-form input.submitBtn {
-  border: none;
-  background-color: rgba(0, 0, 0, .5);
-  /* color: var(--text-color); */
-  border-radius: 1rem;
-  padding: 0.75rem 1.5rem;
-  margin: 0 5rem 2rem 2%;
-  width: 96%;
-  /* max-width: 20rem; */
-  cursor: pointer;
-}
-
-/* inventory */
-.inv-management li {
-  display: block;
-  text-align: center;
-  height: 40px;
-  padding: 1rem;
-  color: whitesmoke;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid whitesmoke ;
-}
-
-.inv-management a{
-  color: whitesmoke;
-  text-decoration: none;
-}
-
-.inv-management li:hover{
-  background-color: green;
-}
 /* CSS for Vehicle Details Page */
 
 .vehicleDetails img {

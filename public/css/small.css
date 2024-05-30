@@ -1,0 +1,38 @@
+@media (max-width: 500px) {
+
+  body{
+    font-size: 75%;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .siteName img{
+    width: 50px;
+    height: auto;
+  }
+
+  header span {
+    font-size:large;
+  }
+
+  nav ul{
+    flex-direction: column;
+
+  }
+
+  .container-upgrade{
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+  }
+  
+}

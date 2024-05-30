@@ -4,7 +4,7 @@
       res.redirect('/')
     } %>
 
-<% messages() %>
+<%- messages() %>
 <% if (errors) { %>
   <ul class="notice">
  <% errors.array().forEach(error => { %>
@@ -13,7 +13,9 @@
  </ul>
 <% } %>
 
-<ul>
+<div class="formContainer" >
+  <ul class="inv-management">
     <li><a href="/inventory/add-classification">Add New Classification</a></li>
     <li><a href="/inventory/add-inventory">Add New Inventory Item</a></li>
 </ul>
+</div>

@@ -11,7 +11,7 @@
         /*background-position: 0% 50%;*/
     }
 
-    .reviewUpgrade-container {
+    /* .reviewUpgrade-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -22,7 +22,7 @@
 
     .reviewSection {
         order: 2;
-    }
+    } */
 
     h1 {
         font-size: x-large;
